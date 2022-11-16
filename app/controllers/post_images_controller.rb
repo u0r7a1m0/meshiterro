@@ -20,7 +20,13 @@ class PostImagesController < ApplicationController
     # 追記：@post_imageには特定のidのPostImageモデルを格納させる！
     @post_image = PostImage.find(params[:id])
   end
-    
+  
+  def destroy
+    @post_image = PostImage.find(params[:id])
+    @post_image.destroy
+    redirect_to PostImageの一覧ページへのパス
+  end
+  
   # 投稿データのストロングパラメータ
   private
 
