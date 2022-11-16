@@ -12,9 +12,13 @@ class PostImagesController < ApplicationController
   end
 
   def index
+    # 追記：post_imagesテーブル内に存在する全てのレコードのインスタンスを代入
+    @post_images = PostImage.all
   end
 
   def show
+    # 追記：@post_imageには特定のidのPostImageモデルを格納させます。
+    @post_image = PostImage.find(params[:id])
   end
     
   # 投稿データのストロングパラメータ
