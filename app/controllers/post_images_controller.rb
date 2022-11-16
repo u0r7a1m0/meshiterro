@@ -17,7 +17,7 @@ class PostImagesController < ApplicationController
   end
 
   def show
-    # 追記：@post_imageには特定のidのPostImageモデルを格納させます。
+    # 追記：@post_imageには特定のidのPostImageモデルを格納させる！
     @post_image = PostImage.find(params[:id])
   end
     
