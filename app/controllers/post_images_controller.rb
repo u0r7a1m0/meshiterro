@@ -19,6 +19,7 @@ class PostImagesController < ApplicationController
   def show
     # 追記：@post_imageには特定のidのPostImageモデルを格納させる！
     @post_image = PostImage.find(params[:id])
+    @post_comment = PostComment.new
   end
   
   def destroy
