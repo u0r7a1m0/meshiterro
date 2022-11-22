@@ -13,7 +13,7 @@ class PostImagesController < ApplicationController
 
   def index
     # 追記：post_imagesテーブル内に存在する全てのレコードのインスタンスを代入
-    @post_images = PostImage.all
+    @post_images = PostImage.page(params[:page])
   end
 
   def show
